@@ -41,9 +41,9 @@ class MahasiswaController extends Controller
     {
         $this->validate($request, [
             'nim' => 'required|min:8|integer',
-            'nama_lengkap' => 'required|min:100',
-            'kelas' => 'required|min:100',
-            'jurusan' => 'required|min:8'
+            'nama_lengkap' => 'required|min:3',
+            'kelas' => 'required|min:4',
+            'jurusan' => 'required|min:3'
         ]);
 
         $store = Mahasiswa::create([
@@ -101,9 +101,9 @@ class MahasiswaController extends Controller
     {
         $this->validate($request, [
             'nim' => 'required|min:8|integer',
-            'nama_lengkap' => 'required|min:100',
-            'kelas' => 'required|min:100',
-            'jurusan' => 'required|min:8'
+            'nama_lengkap' => 'required|min:3',
+            'kelas' => 'required|min:4',
+            'jurusan' => 'required|min:3'
         ]);
         
         $mahasiswa = Mahasiswa::findOrFail($id);
